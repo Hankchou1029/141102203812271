@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1411022038裘斯專題網站</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 導航欄 -->
+<!-- 導航欄 -->
+<div class="navbar">
+    <div class="title">裘斯遊戲專題展示</div>
+    <div class="links">
+        <a href="#section1">首頁</a>
+        <a href="#section2">特色</a>
+        <a href="#section3">聯絡我們</a>
+        <a href="download/finish7.rar">遊戲下載</a>
+
+    </div>
+</div>
+
+
+    
+    <!-- 區塊 1 -->
+  
+    <section id="section1" class="full-screen">
+        <div class="content">
+            <div class="text-background">
+                <h1>裘斯是一款真正的戰鬥遊戲</h1>
+                <p>高品質與創新設計結合的巔峰之作。</p>
+            </div>
+            <!-- 新增影片播放 -->
+            <div class="video-container">
+                <video controls autoplay muted loop>
+                    <source src="img/裘斯 預告片.mp4" type="video/mp4">
+                    您的瀏覽器不支援 HTML5 影片播放。
+                </video>
+            </div>
+        </div>
+    </section>
+    
+
+<!-- 滾動式差圖片 -->
+<!-- 區塊 2 -->
+<section id="section2" class="full-screen">
+    <div class="image-container slide-in">
+        <img src="img/裘斯 LOGO.png" alt="產品圖片" class="top-image">
+    
+    
+    </div>
+
+
+    <div class="content slide-in">
+        <h2>特色展示</h2>
+        <p>關於我們的藝術風格呈現</p>
+
+        <!-- 新增輪播圖片 -->
+        <div class="slider">
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <div class="slides">
+                <img src="img/玫瑰姊姊.png" alt="圖片 1">
+                <img src="img/玫瑰妹妹.png" alt="圖片 2">
+                <img src="img/歐特奈提.png" alt="圖片 3">
+                <img src="img/漫畫整體.png" alt="圖片 4">
+            </div>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+        
+      
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+
+<section id="section3" class="full-screen">
+    <div class="content">
+        <div class="form-background">
+            <h2>聯絡我們</h2>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="姓名" required>
+                <input type="email" name="email" placeholder="電子郵件" required>
+                <textarea name="message" placeholder="訊息" rows="5" required></textarea>
+                <p>
+                    我們會隨時更新遊戲最新資訊，
+                    請留下您的電子郵件以便我們通知您。
+                </p>
+                
+                <button type="submit">送出</button>
+            </form>
+            <p id="formResponse" style="display: none; margin-top: 10px; color: rgb(153, 86, 254);">您的訊息已成功送出！</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

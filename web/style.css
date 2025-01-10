@@ -1,0 +1,382 @@
+/* 全局樣式 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.text-background {
+    background-color: rgba(0, 0, 0, 0.7); /* 黑色半透明背景 */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+
+/* 全屏區塊樣式 */
+.full-screen {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 導航欄 */
+.navbar {
+    position: fixed; /* 固定在頂部 */
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8); /* 半透明背景 */
+    color: white;
+    padding: 30px 50px; /* 內邊距 */
+    z-index: 1000; /* 層級 */
+    display: flex; /* 使用 Flexbox */
+    justify-content: center; /* 將內容居中 */
+    align-items: center; /* 垂直居中對齊 */
+}
+
+.title {
+    position: absolute; /* 標題絕對定位 */
+    left: 50%; /* 水平居中 */
+    transform: translateX(-50%); /* 把標題自身移動到正中 */
+    font-size: 2rem; /* 標題大小 */
+    text-align: center; /* 文字居中對齊 */
+    font-weight: bold; /* 加粗標題 */
+}
+
+.links {
+    position: absolute; /* 讓連結絕對定位 */
+    right: 200px; /* 距離螢幕右側 20px */
+    display: flex; /* 使用 Flexbox */
+    gap: 20px; /* 連結之間的間距 */
+    font-weight: bold;
+    font-size: 2rem; 
+}
+
+.links a {
+    color: white; /* 連結顏色 */
+    text-decoration: none; /* 移除下劃線 */
+    font-size: 2rem; /* 調整字體大小 */
+}
+
+.links a:hover {
+    text-decoration: underline; /* 滑鼠懸停時添加下劃線 */
+    color: #ffa500; /* 滑鼠懸停顏色 */
+}
+
+
+/* 背景圖片樣式 */
+
+/* 區塊 1 */
+/* 區塊 1 */
+#section1 {
+    background-image: url('img/海報.jpg');
+    background-size: 100% 300%; /* 圖片高度延展，避免斷裂 */
+    background-position: center top;
+}
+
+/* 區塊 2 */
+/* 區塊 2 */
+/* 區塊 2 */
+#section2 {
+    background-color: #000; /* 黑色背景 */
+    color: white; /* 白色文字 */
+    display: flex;
+    flex-direction: column; /* 垂直排列子元素 */
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20px; /* 與頂部保留間距 */
+}
+
+/* 外層容器 */
+.slider {
+    width: 100%;
+    max-width: 600px; /* 限制寬度 */
+    height: auto; /* 高度自適應 */
+    overflow: visible; /* 隱藏溢出內容 */
+    position: relative;
+    margin: 0 auto; /* 居中 */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease; /* 平滑切換效果 */
+    height: auto; /* 確保內部內容高度不受限制 */
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* 根據容器裁剪，保持內容完整性 */
+}
+
+
+/* 按鈕樣式 */
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* 初始狀態 */
+.slide-in {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.slide-in.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+/* 圖片置頂樣式 */
+.top-image {
+    max-width: 80%; /* 圖片寬度，不超過父容器的 80% */
+    height: auto; /* 自動調整高度，保持比例 */
+    margin-bottom: 20px; /* 與下方內容保持間距 */
+}
+
+/* 內容區塊 */
+.content {
+    text-align: center; /* 文字居中 */
+    max-width: 800px; /* 限制內容寬度 */
+    padding: 20px; /* 內容內部留白 */
+}
+
+
+/* 區塊 3 */
+#section3 {
+    background-image: url('img/海報.jpg');
+    background-size: 100% 300%;
+    background-position: center bottom;
+}
+
+
+/* 內容區塊 */
+.content {
+    color: white;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.full-screen.active .content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 圖片樣式 */
+.image-container {
+    position: relative;
+}
+
+.product-image {
+    width: 50%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.product-image.hidden {
+    display: none;
+}
+
+.full-screen.active .product-image {
+    opacity: 1;
+}
+
+
+
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    /* 導航欄 */
+    .navbar {
+        flex-direction: column;
+        align-items: center; /* 導航項目居中 */
+        padding: 10px 0;
+    }
+
+    .navbar .links a {
+        margin: 8px 0; /* 增加連結間距 */
+        font-size: 1.2rem; /* 提升字體大小 */
+        text-align: center; /* 導航文字居中 */
+    }
+
+    /* 產品圖片 */
+    .product-image {
+        width: 90%; /* 減小圖片寬度 */
+        margin: 0 auto; /* 居中圖片 */
+        display: block;
+    }
+
+    /* 背景滾動效果 */
+    #section1, #section2, #section3 {
+        background-attachment: scroll; /* 禁用固定背景 */
+        background-size: cover; /* 確保背景圖片適配容器 */
+    }
+
+    /* 影片容器 */
+    .video-container {
+        width: 90%; /* 減小影片容器寬度 */
+        max-width: 600px; /* 最大寬度 */
+        padding: 10px; /* 添加內邊距 */
+    }
+
+    .video-container video {
+        width: 100%; /* 影片全寬 */
+        height: auto; /* 自適應高度 */
+    }
+
+  
+    .form-background {
+        max-width: 90%;
+    }
+
+    form input, form textarea, form button {
+        font-size: 0.9rem;
+    }
+    }
+    
+
+
+
+/* 區塊 1 滑入圖片樣式 */
+.slide-image {
+    width: 50%; /* 圖片寬度，可根據需求調整 */
+    opacity: 0; /* 初始隱藏 */
+    transform: translateX(-100px); /* 初始位置向左偏移 */
+    transition: opacity 1s ease, transform 1s ease; /* 動畫效果 */
+}
+
+/* 當區塊處於 active 狀態時，圖片滑入 */
+.full-screen.active .slide-image {
+    opacity: 1; /* 顯示圖片 */
+    transform: translateX(0); /* 回到原位 */
+}
+
+/* 影片容器樣式 */
+.video-container {
+    margin-top: 20px; /* 與上方文字保持距離 */
+    width: 100%; /* 設置寬度為父容器的 100% */
+    max-width: 800px; /* 最大寬度限制 */
+    height: auto; /* 自動調整高度 */
+    overflow: hidden;
+    border-radius: 10px; /* 圓角效果 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* 添加陰影 */
+
+    /* 水平居中 */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-container video {
+    width: 100%; /* 讓影片填滿容器寬度 */
+    height: auto; /* 自動調整高度，保持比例 */
+    display: block; /* 防止影片產生多餘的間距 */
+}
+
+
+
+/* 影片樣式 */
+.video-container video {
+    width: 100%; /* 影片全寬 */
+    height: auto; /* 自動調整高度，保持比例 */
+    display: block;
+}
+  /* 內容區塊 */
+  .text-background {
+    padding: 15px; /* 減少內距 */
+    max-width: 90%; /* 限制文字區域寬度 */
+    font-size: 1rem; /* 調整字體大小 */
+}
+
+/* 表單背景 */
+
+
+/* 滑動區塊 (輪播) */
+.slider {
+    max-width: 90%; /* 減小輪播寬度 */
+}
+
+.slides img {
+    width: 100%; /* 確保圖片填滿容器 */
+}
+
+/* 表單容器樣式 */
+.form-background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* 表單 */
+form {
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    gap: 15px; /* 元素間距 */
+    width: 100%; /* 表單寬度 */
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: static; /* 確保按鈕不脫離文檔流 */
+    margin: 0; /* 移除可能的外邊距影響 */
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+
